@@ -1,0 +1,30 @@
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animación de desplazamiento desde abajo */
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Clases para aplicar animaciones */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.slide-in-bottom {
+    animation: slideInFromBottom 1s ease-in-out;
+}

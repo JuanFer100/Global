@@ -7,11 +7,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <header>
         <img src="img/logo.png" alt="Logo de la empresa">
-        <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#programas">Programas</a>
-            <a href="#admisiones">Admisiones</a>
-            <a href="#contacto">Contacto</a>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#">Programas</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Programas/diplomados.html">Diplomados</a></li>
+                        <li><a href="#">Técnicos Laborales</a></li>
+                        <li><a href="Programas/cursos.html">Cursos</a></li>
+                        <li><a href="#">Bachillerato</a></li>
+                        <li><a href="#">Inglés</a></li>
+                        <li><a href="#">Francés</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
         </nav>
     </header>
     <link rel="stylesheet" href="css/index.css">
@@ -26,21 +38,22 @@
         <h2>Nuestros Programas</h2>
         <div class="services">
             <div class="service">
+                <a href="Programas/cursos.html">
                 <img src="img/cursos.jpg" alt="Icono de Cursos">
                 <h3>Cursos</h3>
                 <p>Aprende habilidades prácticas con nuestros cursos especializados.</p>
             </div>
             <div class="service">
+                <a href="Programas/diplomados.html">
+                <img src="img/Diplomados.jpg" alt="Icono de Diplomados">
+                <h3>Diplomados</h3>
+                <p>Especialízate en áreas clave con nuestros diplomados.</p>
+                </a>
+            </div>
+            <div class="service">
                 <img src="img/TecnicosL.jpg" alt="Icono de Técnicos Laborales">
                 <h3>Técnicos Laborales</h3>
                 <p>Formación profesional orientada al mercado laboral.</p>
-            </div>
-            <div class="service">
-                <a href="Programas/diplomados.html">
-                    <img src="img/Diplomados.jpg" alt="Icono de Diplomados">
-                    <h3>Diplomados</h3>
-                    <p>Especialízate en áreas clave con nuestros diplomados.</p>
-                </a>
             </div>  
             <div class="service">
                 <img src="img/Bachillerato.jpg" alt="Icono de Bachillerato">

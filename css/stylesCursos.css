@@ -7,115 +7,114 @@ body {
     color: #333;
 }
 
+/* Header and Navbar */
 header {
     background-color: #06125c;
-    color: #fff;
-    padding: 20px 10px;
-    text-align: center;
-}
-/* General Styles for Header */
-header {
-    background-color: #06125c; /* Fondo azul oscuro */
-    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0;
     display: flex;
+    justify-content: space-between; /* Alinea el logo a la izquierda y el menú al centro */
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 header img {
-    height: 50px; /* Tamaño del logo */
-    max-width: 100%;
-    transition: transform 0.3s ease-in-out;
+    height: 50px;
+    margin-left: 20px; /* Añade un margen para separar el logo del borde izquierdo */
 }
 
-header img:hover {
-    transform: scale(1.1); /* Pequeño zoom al pasar el mouse */
-}
-
-nav {
+.navbar {
     display: flex;
-    gap: 20px;
+    justify-content: center; /* Mantén el menú centrado */
+    align-items: center;
+    flex: 1; /* Asegura que el menú ocupe el espacio necesario para centrarlo */
+    padding: 10px 20px;
 }
 
-nav a {
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 50px; /* Aumenta el espacio entre las opciones */
+}
+
+.nav-list > li {
+    position: relative;
+}
+
+.nav-list a {
     color: white;
     text-decoration: none;
-    font-size: 1rem;
     font-weight: bold;
-    position: relative;
-    padding: 5px 0;
-    transition: color 0.3s ease-in-out;
+    font-size: 1rem;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-nav a::after {
-    content: '';
+.nav-list a:hover {
+    background-color: #fdd835;
+    color: #06125c;
+    border-radius: 5px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
     position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 0;
-    height: 2px;
-    background-color: #fdd835; /* Color amarillo */
-    transition: width 0.3s ease-in-out;
-}
-
-nav a:hover {
-    color: #fdd835; /* Cambio de color al hover */
-}
-
-nav a:hover::after {
-    width: 100%; /* Subrayado animado */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #06125c;
-        padding: 10px 0;
-        gap: 10px;
-    }
-
-    nav.show {
-        display: flex;
-    }
-
-    nav a {
-        text-align: left;
-        padding: 10px 20px;
-    }
-
-    .menu-toggle {
-        display: block;
-        font-size: 1.5rem;
-        color: white;
-        cursor: pointer;
-        align-self: flex-end;
-    }
-}
-
-@media (min-width: 769px) {
-    .menu-toggle {
-        display: none;
-    }
-}
-
-
-header h1 {
+    top: 100%;
+    left: 50%; /* Posiciona el submenú centrado horizontalmente */
+    transform: translateX(-50%); /* Ajusta para centrar completamente */
+    background-color: white;
+    color: #333;
+    list-style: none;
+    padding: 10px 0;
     margin: 0;
-    font-size: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    min-width: 200px;
+    z-index: 1000;
+    text-align: center; /* Centra el texto en el submenú */
 }
+
+.dropdown-menu li {
+    padding: 10px 0; /* Ajusta el espaciado vertical */
+}
+
+.dropdown-menu a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #fdd835;
+    color: #06125c;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        margin-top: 10px;
+        transform: none;
+    }
+}
+
 
 .section {
     padding: 40px 20px;

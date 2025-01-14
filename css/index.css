@@ -117,14 +117,16 @@ header img {
 }
 
 
-
 .hero {
     position: relative;
     background: url('../img/banner.jpg') no-repeat center center/cover;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 100px 20px;
+    font-family: Arial, sans-serif; /* Ejemplo de fuente que soporta bold */
+    font-weight: bold; /* Negrilla */
 }
+
 
 .hero h1 {
     font-size: 3em;
@@ -150,6 +152,22 @@ header img {
 .hero button:hover {
     background-color: #e6c022;
 }
+.section-wrapper {
+    border: 2px solid #ddd; /* Color y grosor del borde */
+    border-radius: 15px; /* Esquinas redondeadas */
+    padding: 20px; /* Espaciado interno */
+    background-color: #fff; /* Fondo blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    margin: 20px auto; /* Espaciado externo y centrado */
+    max-width: 1200px; /* Ancho máximo */
+}
+.section-wrapper h2 {
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-bottom: 20px; /* Espaciado inferior */
+    font-size: 1.8rem; /* Ajusta el tamaño del texto si es necesario */
+    color: #06125c; /* Color del texto */
+}
+
 
 .section {
     padding: 20px;
@@ -351,51 +369,65 @@ header img {
     margin-bottom: 20px;
 }
 
-.btn-novedad {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #00327a;
-    color: #ffffff;
-    border-radius: 25px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+
+.social-media {
+    text-align: center;
+    background-color: #e0e0e0; /* Fondo gris claro */
+    padding: 10px 0;
+    border-top: 2px solid #ccc; /* Línea superior */
+    margin-top: 0px; /* Espaciado superior */
 }
 
-.btn-novedad:hover {
-    background-color: #00327a;
+.social-media p {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-/* Responsividad para pantallas pequeñas */
-@media (max-width: 768px) {
-    .novedad {
-        flex: 1 1 calc(50% - 20px); /* Dos cajas por fila */
-    }
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
-@media (max-width: 480px) {
-    .novedad {
-        flex: 1 1 100%; /* Una caja por fila */
-    }
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
 }
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
 
 footer {
     background-color: #00327a;
     color: white;
-    padding: 20px 40px;
+    padding: 10px 40px; /* Reducir padding para hacerlo más angosto */
     text-align: center;
+    display: flex; /* Para alinear los elementos en una fila */
+    justify-content: space-between; /* Separar contenido del logo */
+    align-items: center; /* Centrar verticalmente */
+    flex-wrap: wrap; /* Ajustar en pantallas pequeñas */
+    gap: 20px;
 }
 
 .footer-content {
     display: flex;
+    justify-content: center; /* Centrar opciones */
     flex-wrap: wrap;
-    justify-content: space-around;
     gap: 20px;
-    text-align: left;
+    text-align: center; /* Centrar el texto dentro de las opciones */
 }
 
 .footer-section {
     flex: 1;
     min-width: 200px;
+    text-align: center;
 }
 
 .footer-section h3 {
@@ -422,17 +454,26 @@ footer {
     color: #fdd835;
 }
 
-.social-media {
-    display: flex;
-    gap: 10px;
+.footer-logo {
+    flex: 0;
+    text-align: right; /* Alinear el logo al lado derecho */
 }
 
-.social-media img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s;
+.footer-logo img {
+    width: 100px; /* Tamaño del logo */
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
-.social-media img:hover {
-    transform: scale(1.2);
+.footer-logo img:hover {
+    transform: scale(1.1); /* Animación al pasar el mouse */
+}
+
+/* Nuevo footer para copyright */
+.footer-copyright {
+    background-color: #06125c;
+    color: white;
+    text-align: center;
+    padding: 5px 20px; /* Footer angosto */
+    font-size: 0.9em;
 }

@@ -310,6 +310,70 @@ header img {
     }
 }
 
+
+
+/* Estilo general para los botones */
+.btn-novedad {
+    display: inline-block;
+    background-color: #00327a; 
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto hover */
+.btn-novedad:hover {
+    background-color: #00327a; /* Azul más oscuro */
+    transform: scale(1.05);
+}
+
+/* Efecto para dispositivos táctiles */
+.btn-novedad:active {
+    background-color: #00327a; /* Azul aún más oscuro */
+    transform: scale(0.98);
+}
+
+/* Adaptación para contenedor de botones en dispositivos móviles */
+.novedad-content {
+    text-align: center; /* Centrar el texto y botón */
+    margin-top: 10px;
+}
+
+/* Contenedor general para las novedades */
+.novedades-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adaptable a distintos tamaños */
+    gap: 20px;
+    padding: 20px;
+}
+
+.novedad {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.novedad:hover {
+    transform: translateY(-5px);
+}
+
+.novedad img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    display: block;
+    border-radius: 8px 8px 0 0;
+}
+
+
 .section.novedades {
     background: #f7f9fc;
     padding: 40px 20px;
@@ -359,7 +423,7 @@ header img {
 .novedad-content h3 {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #007bff;
+    color: #06125c;
     margin-bottom: 10px;
 }
 
@@ -404,76 +468,77 @@ header img {
 }
 
 
+   /* Footer */
 footer {
-    background-color: #00327a;
+    background-color: #06125c; /* Fondo azul oscuro */
     color: white;
-    padding: 10px 40px; /* Reducir padding para hacerlo más angosto */
-    text-align: center;
-    display: flex; /* Para alinear los elementos en una fila */
-    justify-content: space-between; /* Separar contenido del logo */
-    align-items: center; /* Centrar verticalmente */
-    flex-wrap: wrap; /* Ajustar en pantallas pequeñas */
-    gap: 20px;
+    padding: 40px 20px; /* Espaciado general */
+    text-align: center; /* Centrar el texto */
 }
 
 .footer-content {
     display: flex;
-    justify-content: center; /* Centrar opciones */
-    flex-wrap: wrap;
-    gap: 20px;
-    text-align: center; /* Centrar el texto dentro de las opciones */
+    justify-content: center; /* Centrar horizontalmente */
+    flex-wrap: wrap; /* Ajustar en pantallas pequeñas */
+    gap: 30px; /* Espacio entre secciones */
+    margin-bottom: 20px; /* Espaciado inferior para el logo */
 }
 
 .footer-section {
     flex: 1;
-    min-width: 200px;
+    min-width: 250px; /* Ancho mínimo para mantener la estructura */
     text-align: center;
 }
 
 .footer-section h3 {
-    font-size: 1.2em;
+    font-size: 1.4em;
     margin-bottom: 10px;
 }
 
 .footer-section ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .footer-section ul li {
-    margin: 5px 0;
+    margin: 8px 0;
+    font-size: 1em;
+    display: flex;
+    align-items: center; /* Centrar verticalmente los íconos y el texto */
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+.footer-section ul li img {
+    margin-right: 8px; /* Espaciado entre el ícono y el texto */
 }
 
 .footer-section ul li a {
     color: white;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-    color: #fdd835;
-}
-
-.footer-logo {
-    flex: 0;
-    text-align: right; /* Alinear el logo al lado derecho */
+    color: #fdd835; /* Cambiar color al pasar el mouse */
 }
 
 .footer-logo img {
-    width: 100px; /* Tamaño del logo */
+    width: 120px; /* Tamaño del logo */
     height: auto;
     transition: transform 0.3s ease;
 }
 
 .footer-logo img:hover {
-    transform: scale(1.1); /* Animación al pasar el mouse */
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
 }
 
-/* Nuevo footer para copyright */
+/* Footer para derechos reservados */
 .footer-copyright {
-    background-color: #06125c;
+    background-color: #041046;
     color: white;
-    text-align: center;
-    padding: 5px 20px; /* Footer angosto */
     font-size: 0.9em;
+    padding: 10px;
+    text-align: center;
 }
+

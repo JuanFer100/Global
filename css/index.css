@@ -161,7 +161,25 @@ header img {
     margin: 20px auto; /* Espaciado externo y centrado */
     max-width: 1200px; /* Ancho máximo */
 }
+
 .section-wrapper h2 {
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-bottom: 20px; /* Espaciado inferior */
+    font-size: 1.8rem; /* Ajusta el tamaño del texto si es necesario */
+    color: #06125c; /* Color del texto */
+}
+
+.section-novedades {
+    border: 2px solid #ddd; /* Color y grosor del borde */
+    border-radius: 15px; /* Esquinas redondeadas */
+    padding: 20px; /* Espaciado interno */
+    background-color: #fff; /* Fondo blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    margin: 20px auto; /* Espaciado externo y centrado */
+    max-width: 1200px; /* Ancho máximo */
+}
+
+.section-novedades h2 {
     text-align: center; /* Centra el texto horizontalmente */
     margin-bottom: 20px; /* Espaciado inferior */
     font-size: 1.8rem; /* Ajusta el tamaño del texto si es necesario */
@@ -218,11 +236,12 @@ header img {
     border-radius: 15px;
     margin-bottom: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1); /* Animación más suave */
 }
 
 .service img:hover {
-    transform: scale(1.05);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Reduce intensidad */
 }
 
 .service h3 {
@@ -310,7 +329,7 @@ header img {
     }
 }
 
-
+/*Seccion 2 */
 
 /* Estilo general para los botones */
 .btn-novedad {
@@ -325,26 +344,37 @@ header img {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
-/* Efecto hover */
-.btn-novedad:hover {
-    background-color: #00327a; /* Azul más oscuro */
-    transform: scale(1.05);
+/* Botón con efecto hover y active */
+.btn-novedad {
+    background-color: #004aa8;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    will-change: transform, background-color;
 }
 
-/* Efecto para dispositivos táctiles */
+.btn-novedad:hover, .btn-novedad:focus {
+    background-color: #00327a; /* Azul más oscuro */
+    transform: scale(1.05);
+    outline: none; /* Elimina outline por defecto */
+    box-shadow: 0 0 4px #00327a; /* Añade enfoque visible */
+}
+
 .btn-novedad:active {
-    background-color: #00327a; /* Azul aún más oscuro */
+    background-color: #00264d; /* Azul aún más oscuro */
     transform: scale(0.98);
 }
 
-/* Adaptación para contenedor de botones en dispositivos móviles */
+/* Contenedor para botones en dispositivos móviles */
 .novedad-content {
-    text-align: center; /* Centrar el texto y botón */
+    text-align: center; /* Centrar el contenido */
     margin-top: 10px;
 }
 
-/* Contenedor general para las novedades */
+/* Contenedor de novedades */
 .novedades-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adaptable a distintos tamaños */
@@ -352,18 +382,22 @@ header img {
     padding: 20px;
 }
 
+/* Estilo de cada tarjeta de novedad */
 .novedad {
     background: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    will-change: transform, box-shadow;
 }
 
 .novedad:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+
 
 .novedad img {
     width: 100%;

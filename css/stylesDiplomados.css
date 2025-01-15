@@ -117,7 +117,7 @@ header img {
 }
 
 .section {
-    padding: 40px 20px;
+    padding: 110px;
     text-align: center;
     background-color: #fff;
 }
@@ -197,4 +197,78 @@ a:hover h3 {
     .service {
         width: 100%; /* 1 item per row */
     }
+}
+
+ /* Footer */
+ footer {
+    background-color: #06125c; /* Fondo azul oscuro */
+    color: white;
+    padding: 40px 20px; /* Espaciado general */
+    text-align: center; /* Centrar el texto */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    flex-wrap: wrap; /* Ajustar en pantallas pequeñas */
+    gap: 30px; /* Espacio entre secciones */
+    margin-bottom: 20px; /* Espaciado inferior para el logo */
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px; /* Ancho mínimo para mantener la estructura */
+    text-align: center;
+}
+
+.footer-section h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin: 8px 0;
+    font-size: 1em;
+    display: flex;
+    align-items: center; /* Centrar verticalmente los íconos y el texto */
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+.footer-section ul li img {
+    margin-right: 8px; /* Espaciado entre el ícono y el texto */
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #fdd835; /* Cambiar color al pasar el mouse */
+}
+
+.footer-logo img {
+    width: 120px; /* Tamaño del logo */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Footer para derechos reservados */
+.footer-copyright {
+    background-color: #041046;
+    color: white;
+    font-size: 0.9em;
+    padding: 10px;
+    text-align: center;
 }

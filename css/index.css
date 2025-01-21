@@ -19,7 +19,7 @@ header {
 }
 
 header img {
-    height: 50px;
+    height: 100px;
     margin-left: 20px; /* Añade un margen para separar el logo del borde izquierdo */
 }
 
@@ -116,26 +116,52 @@ header img {
     }
 }
 
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fdd835;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #f6da62;
+}
+
+
 
 .hero {
     position: relative;
     background: url('../img/banner.jpg') no-repeat center center/cover;
     color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 100px 20px;
+    display: flex; /* Habilita flexbox */
+    flex-direction: column; /* Organiza los elementos en columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: flex-start; /* Alinea a la izquierda */
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding: 200px 20px;
     font-family: Arial, sans-serif; /* Ejemplo de fuente que soporta bold */
     font-weight: bold; /* Negrilla */
 }
 
 
+
 .hero h1 {
     font-size: 3em;
     margin: 0;
+    max-width: 500px;
 }
 
 .hero p {
     font-size: 1.5em;
     margin: 10px 0 20px;
+    max-width: 300px;
 }
 
 .hero button {
@@ -152,38 +178,51 @@ header img {
 .hero button:hover {
     background-color: #e6c022;
 }
+
 .section-wrapper {
     border: 2px solid #ddd; /* Color y grosor del borde */
     border-radius: 15px; /* Esquinas redondeadas */
-    padding: 20px; /* Espaciado interno */
     background-color: #fff; /* Fondo blanco */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional */
-    margin: 20px auto; /* Espaciado externo y centrado */
-    max-width: 1200px; /* Ancho máximo */
+    margin: 0px auto; /* Espaciado externo y centrado */
+    max-width: 100%; /* Ancho máximo */
+    position: relative; /* Necesario para ajustar elementos internos */
 }
 
 .section-wrapper h2 {
+    background-color: #06125c; /* Color azul para la barra */
+    color: #fff; /* Texto blanco */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes completamente redondeados */
     text-align: center; /* Centra el texto horizontalmente */
-    margin-bottom: 20px; /* Espaciado inferior */
-    font-size: 1.8rem; /* Ajusta el tamaño del texto si es necesario */
-    color: #06125c; /* Color del texto */
+    margin: 0 auto 20px auto; /* Centra el título y agrega margen inferior */
+    font-size: 1.8rem; /* Tamaño del texto */
+    font-weight: bold; /* Hace el texto más destacado */
+    max-width: 100%; /* Evita que el título sobresalga del contenedor */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
 }
+
 
 .section-novedades {
     border: 2px solid #ddd; /* Color y grosor del borde */
     border-radius: 15px; /* Esquinas redondeadas */
-    padding: 20px; /* Espaciado interno */
     background-color: #fff; /* Fondo blanco */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional */
-    margin: 20px auto; /* Espaciado externo y centrado */
-    max-width: 1200px; /* Ancho máximo */
+    margin: 0px auto; /* Espaciado externo y centrado */
+    max-width: 100%; /* Ancho máximo */
 }
 
 .section-novedades h2 {
+    background-color: #06125c; /* Color azul para la barra */
+    color: #fff; /* Texto blanco */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes completamente redondeados */
     text-align: center; /* Centra el texto horizontalmente */
-    margin-bottom: 20px; /* Espaciado inferior */
-    font-size: 1.8rem; /* Ajusta el tamaño del texto si es necesario */
-    color: #06125c; /* Color del texto */
+    margin: 0 auto 20px auto; /* Centra el título y agrega margen inferior */
+    font-size: 1.8rem; /* Tamaño del texto */
+    font-weight: bold; /* Hace el texto más destacado */
+    max-width: 100%; /* Evita que el título sobresalga del contenedor */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
 }
 
 
@@ -334,7 +373,7 @@ header img {
 /* Estilo general para los botones */
 .btn-novedad {
     display: inline-block;
-    background-color: #00327a; 
+    background-color: #fdd835; 
     color: #fff;
     text-transform: uppercase;
     font-weight: bold;
@@ -346,7 +385,7 @@ header img {
 }
 /* Botón con efecto hover y active */
 .btn-novedad {
-    background-color: #004aa8;
+    background-color: #fdd835;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -357,14 +396,14 @@ header img {
 }
 
 .btn-novedad:hover, .btn-novedad:focus {
-    background-color: #00327a; /* Azul más oscuro */
+    background-color: #f6da62; 
     transform: scale(1.05);
     outline: none; /* Elimina outline por defecto */
-    box-shadow: 0 0 4px #00327a; /* Añade enfoque visible */
+    box-shadow: 0 0 4px #f6da62; 
 }
 
 .btn-novedad:active {
-    background-color: #00264d; /* Azul aún más oscuro */
+    background-color: #f6da62;
     transform: scale(0.98);
 }
 

@@ -18,10 +18,32 @@ header {
     align-items: center;
 }
 
-header img {
-    height: 100px;
-    margin-left: 20px; /* Añade un margen para separar el logo del borde izquierdo */
+/* Contenedor del logo */
+.logo-container {
+    width: 300px; /* Ancho del contenedor */
+    height: 100px; /* Alto del contenedor */
+    background-color: white; /* Fondo del cilindro */
+    border-top-right-radius: 75px; /* Redondea la esquina superior derecha */
+    border-bottom-right-radius: 75px; /* Redondea la esquina inferior derecha */
+    border-top-left-radius: 0; /* Sin redondeo en el lado izquierdo */
+    border-bottom-left-radius: 0; /* Sin redondeo en el lado izquierdo */
+    display: flex;
+    justify-content: flex-start; /* Alinea la imagen hacia la izquierda */
+    align-items: center; /* Centra verticalmente la imagen */
+    overflow: hidden; /* Recorta contenido sobrante */
+    margin-left: 0; /* Alineación exacta al borde izquierdo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para un efecto atractivo */
 }
+
+/* Estilo de la imagen dentro del contenedor */
+.logo-container img {
+    height: 100%; /* Ocupa toda la altura del contenedor */
+    width: auto; /* Mantiene la proporción original de la imagen */
+    object-fit: contain; /* Ajusta la imagen dentro del contenedor sin recortar */
+    object-position: left center; /* Alinea la imagen hacia la izquierda */
+    margin-left: 100px;
+}
+
 
 .navbar {
     display: flex;
@@ -506,15 +528,6 @@ header img {
     margin-bottom: 20px;
 }
 
-
-.social-media {
-    text-align: center;
-    background-color: #e0e0e0; /* Fondo gris claro */
-    padding: 10px 0;
-    border-top: 2px solid #ccc; /* Línea superior */
-    margin-top: 0px; /* Espaciado superior */
-}
-
 .social-media p {
     font-size: 1.2rem;
     color: #333;
@@ -540,8 +553,7 @@ header img {
     opacity: 0.8;
 }
 
-
-   /* Footer */
+/* Footer */
 footer {
     background-color: #06125c; /* Fondo azul oscuro */
     color: white;
@@ -554,7 +566,7 @@ footer {
     justify-content: center; /* Centrar horizontalmente */
     flex-wrap: wrap; /* Ajustar en pantallas pequeñas */
     gap: 30px; /* Espacio entre secciones */
-    margin-bottom: 20px; /* Espaciado inferior para el logo */
+    margin-bottom: 20px; /* Espaciado inferior */
 }
 
 .footer-section {
@@ -586,29 +598,28 @@ footer {
     margin-right: 8px; /* Espaciado entre el ícono y el texto */
 }
 
-.footer-section ul li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
+.social-media {
+    text-align: center;
 }
 
-.footer-section ul li a:hover {
-    color: #fdd835; /* Cambiar color al pasar el mouse */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaciado entre los íconos */
 }
 
-.footer-logo img {
-    width: 120px; /* Tamaño del logo */
-    height: auto;
+.social-icons img {
+    width: 32px;
+    height: 32px;
     transition: transform 0.3s ease;
 }
 
-.footer-logo img:hover {
-    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+.social-icons img:hover {
+    transform: scale(1.1); /* Zoom al pasar el mouse */
 }
 
 /* Footer para derechos reservados */
 .footer-copyright {
-    background-color: #041046;
     color: white;
     font-size: 0.9em;
     padding: 10px;

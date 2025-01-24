@@ -39,10 +39,32 @@ header {
     align-items: center;
 }
 
-header img {
-    height: 50px;
-    margin-left: 20px; /* Añade un margen para separar el logo del borde izquierdo */
+/* Contenedor del logo */
+.logo-container {
+    width: 300px; /* Ancho del contenedor */
+    height: 100px; /* Alto del contenedor */
+    background-color: white; /* Fondo del cilindro */
+    border-top-right-radius: 75px; /* Redondea la esquina superior derecha */
+    border-bottom-right-radius: 75px; /* Redondea la esquina inferior derecha */
+    border-top-left-radius: 0; /* Sin redondeo en el lado izquierdo */
+    border-bottom-left-radius: 0; /* Sin redondeo en el lado izquierdo */
+    display: flex;
+    justify-content: flex-start; /* Alinea la imagen hacia la izquierda */
+    align-items: center; /* Centra verticalmente la imagen */
+    overflow: hidden; /* Recorta contenido sobrante */
+    margin-left: 0; /* Alineación exacta al borde izquierdo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para un efecto atractivo */
 }
+
+/* Estilo de la imagen dentro del contenedor */
+.logo-container img {
+    height: 100%; /* Ocupa toda la altura del contenedor */
+    width: auto; /* Mantiene la proporción original de la imagen */
+    object-fit: contain; /* Ajusta la imagen dentro del contenedor sin recortar */
+    object-position: left center; /* Alinea la imagen hacia la izquierda */
+    margin-left: 100px;
+}
+
 
 .navbar {
     display: flex;
@@ -72,7 +94,7 @@ header img {
     font-size: 1rem;
     padding: 10px 20px;
     transition: background-color 0.3s, color 0.3s;
-    display: flex;
+    display: flex;  
     align-items: center;
     justify-content: center;
 }
@@ -120,6 +142,21 @@ header img {
 
 .dropdown:hover .dropdown-menu {
     display: block;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        margin-top: 10px;
+        transform: none;
+    }
 }
   .hero {
     text-align: center;

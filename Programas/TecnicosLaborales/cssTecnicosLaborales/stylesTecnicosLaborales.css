@@ -253,8 +253,8 @@ header {
     height: 100px;
 }
   
-   /* Footer */
-   footer {
+/* Footer */
+footer {
     background-color: #06125c; /* Fondo azul oscuro */
     color: white;
     padding: 40px 20px; /* Espaciado general */
@@ -266,7 +266,7 @@ header {
     justify-content: center; /* Centrar horizontalmente */
     flex-wrap: wrap; /* Ajustar en pantallas pequeñas */
     gap: 30px; /* Espacio entre secciones */
-    margin-bottom: 20px; /* Espaciado inferior para el logo */
+    margin-bottom: 20px; /* Espaciado inferior */
 }
 
 .footer-section {
@@ -298,29 +298,28 @@ header {
     margin-right: 8px; /* Espaciado entre el ícono y el texto */
 }
 
-.footer-section ul li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
+.social-media {
+    text-align: center;
 }
 
-.footer-section ul li a:hover {
-    color: #fdd835; /* Cambiar color al pasar el mouse */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaciado entre los íconos */
 }
 
-.footer-logo img {
-    width: 120px; /* Tamaño del logo */
-    height: auto;
+.social-icons img {
+    width: 32px;
+    height: 32px;
     transition: transform 0.3s ease;
 }
 
-.footer-logo img:hover {
-    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+.social-icons img:hover {
+    transform: scale(1.1); /* Zoom al pasar el mouse */
 }
 
 /* Footer para derechos reservados */
 .footer-copyright {
-    background-color: #041046;
     color: white;
     font-size: 0.9em;
     padding: 10px;

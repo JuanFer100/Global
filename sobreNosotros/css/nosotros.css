@@ -50,6 +50,7 @@ main {
     align-items: center;
     flex: 1; /* Asegura que el menú ocupe el espacio necesario para centrarlo */
     padding: 10px 20px;
+    margin-right: 200px;
 }
 
 

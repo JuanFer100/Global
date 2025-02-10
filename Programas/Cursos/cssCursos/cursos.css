@@ -149,6 +149,26 @@ header img {
 .dropdown:hover .dropdown-menu {
     display: block;
 }
+.inscription {
+    text-align: center;
+    margin: 40px 0;
+}
+.btn-inscribete {
+    background-color: #06125c;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-inscribete:hover {
+    background-color: #12217f;
+    transform: scale(1.05);
+}
   .hero {
     text-align: center;
     background-color: #f3f4f6;

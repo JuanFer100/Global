@@ -3,11 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Inicio</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
     <header>
         <div class="logo-container">
-            <img src="img/logo.png" alt="Logo de la empresa" loading="lazy">
+            <img href="index.html" src="img/logo.png" alt="Logo de la empresa" loading="lazy">
         </div>
+    
+        <!-- Botón del menú hamburguesa -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon"><i class="bx bx-menu"></i></label>
+    
         <nav class="navbar">
             <ul class="nav-list">
                 <li><a href="index.html">Inicio</a></li>
@@ -27,16 +36,13 @@
             </ul>
         </nav>
     </header>
-    <link rel="stylesheet" href="css/index.css">
-</head>
-<body>
     <section class="hero">
         <h1>Institución Global Educa</h1>
         <p>Formando un camino a un futuro brillante</p>
         <a href="sobreNosotros/nosotros.html" class="btn">Conoce más</a>
     </section>
 
-        <!-- seccion modulos -->
+    <!-- seccion modulos -->
     <section class="section-wrapper" id="programas">
         <h2>Nuestros Programas</h2>
         <div class="services">
@@ -129,7 +135,6 @@
             </div>
         </section>
         <footer>
-
             <div class="footer-content">
                 <!-- Sección de Contacto -->
                 <div class="footer-section">
@@ -154,16 +159,16 @@
                 <div class="footer-section social-media">
                     <h3>SÍGUENOS EN NUESTRAS REDES</h3>
                     <div class="social-icons">
-                        <a href="">
+                        <a href="https://www.facebook.com">
                             <img src="img/facebook-icon.png" alt="Facebook" loading="lazy">
                         </a>
-                        <a href="#">
+                        <a href="https://www.instagram.com">
                             <img src="img/instagram-icon.png" alt="Instagram" loading="lazy">
                         </a>
                         <a href="https://www.youtube.com/channel/UCCvs-HhXbZsX7RwRycXeADA">
                             <img src="img/youtube-icon.png" alt="YouTube" loading="lazy">
                         </a>
-                        <a href="#">
+                        <a href="https://www.linkedin.com">
                             <img src="img/linkedin-icon.png" alt="LinkedIn" loading="lazy">
                         </a>
                         <a href="https://x.com/CenterGlobalTL">
@@ -197,5 +202,3 @@
         </footer>  
 </body>
 </html>
-
-

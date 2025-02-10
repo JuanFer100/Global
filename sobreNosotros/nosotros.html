@@ -3,38 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Nosotros</title>
-    <header>
-        <div class="logo-container">
-            <img src="/img/logo.png" alt="Logo de la empresa" loading="lazy">
-        </div>
-        <nav class="navbar">
-            <ul class="nav-list">
-                <li><a href="/index.html">Inicio</a></li>
-                <li class="dropdown">
-                    <a href="#">Programas</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/Programas/diplomados.html">Diplomados</a></li>
-                        <li><a href="/Programas/tecnicosL.html">Técnicos Laborales</a></li>
-                        <li><a href="/Programas/cursos.html">Cursos</a></li>
-                        <li><a href="#">Bachillerato</a></li>
-                        <li><a href="#">Inglés</a></li>
-                        <li><a href="#">Francés</a></li>
-                    </ul>
-                </li>
-                <li><a href="/sobreNosotros/nosotros.html">Nosotros</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
     <link rel="stylesheet" href="css/nosotros.css">
 </head>
+<header>
+    <div class="logo-container">
+        <img href="index.html" src="/img/logo.png" alt="Logo de la empresa" loading="lazy">
+    </div>
 
+    <!-- Botón del menú hamburguesa -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon"><i class="bx bx-menu"></i></label>
+
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="/index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#">Programas</a>
+                <ul class="dropdown-menu">
+                    <li><a href="/Programas/diplomados.html">Diplomados</a></li>
+                    <li><a href="/Programas/tecnicosL.html">Técnicos Laborales</a></li>
+                    <li><a href="/Programas/cursos.html">Cursos</a></li>
+                    <li><a href="#">Bachillerato</a></li>
+                    <li><a href="#">Inglés</a></li>
+                    <li><a href="#">Francés</a></li>
+                </ul>
+            </li>
+            <li><a href="sobreNosotros/nosotros.html">Nosotros</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
     <main>
         <!-- global -->
         <section class="aboutus">
             <div class="text-content">
-            <h2>Centro de Educación Global</h2>
+            <h2>Centro de educación global</h2>
             <p>
                 El <strong>CENTRO DE EDUCACIÓN GLOBAL</strong> es una Institución Educativa de carácter privado, aprobada por la Secretaría de Educación de Bogotá, a través de una oferta académica de excelencia y calidad en el conocimiento de las lenguas extranjeras y los programas técnicos laborales.
             </p>
@@ -76,41 +81,58 @@
                 <h3>CONTACTO</h3>
                 <ul>
                     <li>
-                        <img src="img/icono-ubicacion.png" alt="Ubicación" style="width: 16px; height: 16px; margin-right: 5px;" loading="lazy">
+                        <img src="/img/ubicacion.webp" alt="Ubicación" style="width: 16px; height: 16px; margin-right: 5px;" loading="lazy">
                         Carrera 27 # 26 - 56. Bogotá
                     </li>
                     <li>
-                        <img src="img/icono-ubicacion.png" alt="Código postal" style="width: 16px; height: 16px; margin-right: 5px;" loading="lazy">
+                        <img src="/img/ubicacion.webp" alt="Código postal" style="width: 16px; height: 16px; margin-right: 5px;" loading="lazy">
                         Código postal: 111311
                     </li>
                     <li>
-                        <img src="img/icono-celular.png" alt="Teléfono" style="width: 16px; height: 16px; margin-right: 5px;" loading="lazy">
-                        Atención telefónica: +57 322 3763146
+                        Atención WhatsApp: +57 322 3763146
                     </li>
                 </ul>
             </div>
+
     
             <!-- Sección de Redes Sociales -->
             <div class="footer-section social-media">
                 <h3>SÍGUENOS EN NUESTRAS REDES</h3>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/coredutech">
+                    <a href="https://www.facebook.com">
                         <img src="img/facebook-icon.png" alt="Facebook" loading="lazy">
                     </a>
-                    <a href="#">
+                    <a href="https://www.instagram.com">
                         <img src="img/instagram-icon.png" alt="Instagram" loading="lazy">
                     </a>
-                    <a href="#">
+                    <a href="https://www.youtube.com/channel/UCCvs-HhXbZsX7RwRycXeADA">
                         <img src="img/youtube-icon.png" alt="YouTube" loading="lazy">
                     </a>
-                    <a href="#">
+                    <a href="https://www.linkedin.com">
                         <img src="img/linkedin-icon.png" alt="LinkedIn" loading="lazy">
                     </a>
-                    <a href="#">
+                    <a href="https://x.com/CenterGlobalTL">
                         <img src="img/twitter-icon.png" alt="Twitter" loading="lazy">
+                    </a>
+                    <a href="https://www.tiktok.com/@globalcentereducation">
+                        <img src="img/tiktok.svg" alt="Facebook" loading="lazy">
                     </a>
                 </div>
             </div>
+            <!-- Sección de Contacto -->
+            <div class="footer-section">
+                <h3>CUENTA BANCARIA</h3>
+                <ul>
+                    <li>
+                        <img src="/img/banco.jpg" alt="Logo Bancolombia" style="width: 30px; height: auto;">
+                        Bancolombia
+                    </li>
+                    <li>
+                        Cuenta de ahorros número: 07000006079
+                    </li>
+                </ul>
+            </div>
+            
         </div>
     
         <!-- Derechos reservados -->

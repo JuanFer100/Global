@@ -1,12 +1,3 @@
-    /* General Styles */
-    body {
-        font-family: 'Arial', sans-serif;
-        margin: 100px;
-        padding: 10px;
-        background-color: #f4f4f9;
-        color: #333;
-    }
-
     h1, h2 {
         
         color: #06125c;
@@ -20,68 +11,55 @@ body {
     background-color: #f5f5f5;
     color: #333;
 }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #0024a7;
-    padding: 1rem;
-  }
-  
 /* Header and Navbar */
 header {
     background-color: #06125c;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 0;
     display: flex;
-    justify-content: space-between; /* Alinea el logo a la izquierda y el menú al centro */
+    justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 /* Contenedor del logo */
 .logo-container {
-    width: 300px; /* Ancho del contenedor */
-    height: 100px; /* Alto del contenedor */
-    background-color: white; /* Fondo del cilindro */
-    border-top-right-radius: 75px; /* Redondea la esquina superior derecha */
-    border-bottom-right-radius: 75px; /* Redondea la esquina inferior derecha */
-    border-top-left-radius: 0; /* Sin redondeo en el lado izquierdo */
-    border-bottom-left-radius: 0; /* Sin redondeo en el lado izquierdo */
+    width: 300px;
+    height: 100px;
+    background-color: white;
+    border-top-right-radius: 75px;
+    border-bottom-right-radius: 75px;
     display: flex;
-    justify-content: flex-start; /* Alinea la imagen hacia la izquierda */
-    align-items: center; /* Centra verticalmente la imagen */
-    overflow: hidden; /* Recorta contenido sobrante */
-    margin-left: 0; /* Alineación exacta al borde izquierdo */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para un efecto atractivo */
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    margin-left: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilo de la imagen dentro del contenedor */
 .logo-container img {
-    height: 100%; /* Ocupa toda la altura del contenedor */
-    width: auto; /* Mantiene la proporción original de la imagen */
-    object-fit: contain; /* Ajusta la imagen dentro del contenedor sin recortar */
-    object-position: left center; /* Alinea la imagen hacia la izquierda */
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    object-position: left center;
     margin-left: 100px;
 }
 
-
 .navbar {
     display: flex;
-    justify-content: center; /* Mantén el menú centrado */
+    justify-content: center;
     align-items: center;
-    flex: 1; /* Asegura que el menú ocupe el espacio necesario para centrarlo */
+    flex: 1;
     padding: 10px 20px;
     margin-right: 200px;
 }
-
 
 .nav-list {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 50px; /* Aumenta el espacio entre las opciones */
+    gap: 50px;
 }
 
 .nav-list > li {
@@ -95,7 +73,7 @@ header {
     font-size: 1rem;
     padding: 10px 20px;
     transition: background-color 0.3s, color 0.3s;
-    display: flex;  
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -110,8 +88,8 @@ header {
 .dropdown-menu {
     position: absolute;
     top: 100%;
-    left: 50%; /* Posiciona el submenú centrado horizontalmente */
-    transform: translateX(-50%); /* Ajusta para centrar completamente */
+    left: 50%;
+    transform: translateX(-50%);
     background-color: white;
     color: #333;
     list-style: none;
@@ -122,11 +100,11 @@ header {
     display: none;
     min-width: 200px;
     z-index: 1000;
-    text-align: center; /* Centra el texto en el submenú */
+    text-align: center;
 }
 
 .dropdown-menu li {
-    padding: 10px 0; /* Ajusta el espaciado vertical */
+    padding: 10px 0;
 }
 
 .dropdown-menu a {
@@ -143,6 +121,94 @@ header {
 
 .dropdown:hover .dropdown-menu {
     display: block;
+}
+/* 🔽 RESPONSIVE: Menú Hamburguesa */
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* Estilos Responsive */
+@media (max-width: 768px) {
+    .logo-container {
+        width: 180px;
+        height: 60px;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%; /* Coloca el navbar debajo del header */
+        left: 0;
+        width: 100%;
+        background: #06125c;
+        display: none; /* Oculta el navbar por defecto */
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
+    }
+
+    .menu-icon {
+        display: block; /* Muestra el ícono del menú hamburguesa */
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+    }
+
+    .dropdown-menu {
+        position: static;
+        display: none; /* Oculta el menú desplegable por defecto */
+        background-color: #ffffff; /* Fondo blanco */
+        border-radius: 8px; /* Bordes redondeados */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        padding: 10px 0;
+        margin-top: 10px;
+        width: 90%; /* Ancho relativo al contenedor */
+        max-width: 250px; /* Ancho máximo */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Transición suave */
+        opacity: 0; /* Inicialmente transparente */
+        transform: translateY(-10px); /* Desplazamiento inicial */
+    }
+
+    .dropdown-menu li {
+        padding: 8px 20px; /* Espaciado interno */
+    }
+
+    .dropdown-menu a {
+        color: #333; /* Color de texto oscuro */
+        text-decoration: none;
+        font-size: 0.9rem;
+        display: block; /* Hace que el enlace ocupe todo el ancho */
+        transition: color 0.3s ease, background-color 0.3s ease; /* Transición suave */
+    }
+
+    .dropdown-menu a:hover {
+        color: #06125c; /* Color de texto al hacer hover */
+        background-color: #fdd835; /* Fondo amarillo al hacer hover */
+        border-radius: 4px; /* Bordes redondeados al hacer hover */
+    }
+
+    /* Muestra el navbar cuando el menú hamburguesa está activado */
+    #menu-toggle:checked ~ .navbar {
+        display: flex;
+    }
+
+    /* Muestra el menú desplegable cuando el dropdown está activo */
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        opacity: 1; /* Hace visible el menú */
+        transform: translateY(0); /* Restablece la posición */
+    }
 }
 
 .inscription {

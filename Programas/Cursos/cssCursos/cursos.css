@@ -143,6 +143,8 @@ header {
 .btn-inscribete:hover {
     background-color: #12217f;
     transform: scale(1.05);
+}
+
 /* 🔽 RESPONSIVE: Menú Hamburguesa */
 .menu-icon {
     display: none;
@@ -402,4 +404,3 @@ footer {
     padding: 10px;
     text-align: center;
 }
-
